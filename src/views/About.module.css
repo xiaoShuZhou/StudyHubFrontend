@@ -1,0 +1,50 @@
+/* About.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 1.2em;
+  text-align: justify;
+  max-width: 50vw;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.aboutMeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  width: 18vw; /* Adjust this to change the image size */
+  position: absolute;
+  right: 2vw;
+  top: 55vh;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.center {
+  text-align: center
+}

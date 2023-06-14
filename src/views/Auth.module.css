@@ -1,0 +1,15 @@
+/* Auth.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: auto;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+.button {
+  cursor: pointer;
+}

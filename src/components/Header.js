@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <header className={styles.header}>
       <div className={styles.icon}><Link className={styles.link} to="/">FullStackHub</Link></div>
@@ -12,7 +12,11 @@ const Header = () => {
         <Link className={styles.link} to="/about">About</Link>
         <Link className={styles.link} to="/posts">Posts</Link>
         <Link className={styles.link} to="/blogs">Blogs</Link>
-        <Link className={styles.link} to="/login">Login</Link>
+        {user === null ?
+          <Link className={styles.link} to="/auth">Auth</Link>
+          :
+          <Link className={styles.link} to="/profile">Profile</Link>
+        }
       </nav>
     </header>
   )

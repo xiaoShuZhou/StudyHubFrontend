@@ -20,13 +20,6 @@ const create = async newBlog => {
   return request.data
 }
 
-const postImage = async newImage => {
-  const config = {
-    headers: { Authorization: token },
-  }
-  const request = await axios.post('http://localhost:3000/api/blogs/image', newImage, config)
-  return request.data
-}
 
 const like = async blog => {
   const config = {
@@ -46,4 +39,4 @@ const deleteBlog = async blog => {
 
 
 
-export default { getAll, create, setToken, like, deleteBlog, postImage }
+export default { getAll, create, setToken, like, deleteBlog }

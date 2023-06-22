@@ -1,0 +1,98 @@
+/* ShowBlogs.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&family=Courier+New&display=swap');
+
+.heading {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.block {
+  width: 24%; /* Four blocks in one line */
+  height: 40vh; /* Adjust as necessary */
+  margin: 1em; /* Space between rows */
+  overflow: hidden; /* Prevents content from spilling out of the block */
+  border: 0.1rem solid #ccc; /* Border around the block */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add box-shadow for a more 3D look */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow when hovered */
+}
+
+.block:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Increase box-shadow on hover for a lifted effect */
+}
+
+.block img {
+  width: 100%;
+  height: 50%; /* Adjust as necessary */
+  object-fit: cover; /* Ensures the image covers the available space without stretching */
+}
+
+.block h2 {
+  font-size: 1.3rem; /* Responsive unit */
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 0.3rem;
+  text-align: center;
+  transition: transform 0.3s ease; /* Add transition for a smoother scale effect */
+}
+
+.block h2:hover {
+  transform: scale(1.1); /* Scale up the title on hover */
+}
+
+.block p {
+  font-size: 1rem; /* Responsive unit */
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0.3rem;
+  text-align: center;
+}
+
+.customlink {
+  text-decoration: none; /* Remove default underline */
+  color: inherit; /* Inherit color from parent */
+  transition: color 0.3s transform 0.3s ease;
+}
+
+.customlink:hover {
+  color: royalblue;
+  transform: scale(1.3);
+}
+
+.pageNumbers {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pageNumbers button {
+  background-color: #f8f8f8;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+}
+
+.pageNumbers button:hover {
+  background-color: #ddd;
+}
+
+.pageNumbers .active {
+  background-color: #4CAF50;
+  color: white;
+}

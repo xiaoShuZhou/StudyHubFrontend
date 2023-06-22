@@ -11,7 +11,7 @@ const Header = ({ user }) => {
         <Link className={styles.link} to="/">Home</Link>
         <Link className={styles.link} to="/about">About</Link>
         <Link className={styles.link} to="/post">Post</Link>
-        <Link className={styles.link} to="/blogs">Blogs</Link>
+        <Link className={styles.link} to="/showblogs">Blogs</Link>
         {user === null ?
           <Link className={styles.link} to="/auth">Auth</Link>
           :

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Home from './views/Home'
 import About from './views/About'
 import ShowBlogs from './views/ShowBlogs'
+import ShowBlog from './views/ShowBlog'
 import Post from './views/Post'
 import Auth from './views/Auth'
 import Profile from './views/Profile'
@@ -85,12 +86,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/showblogs" element={<ShowBlogs />} />
+        <Route path="/showblog/:id" element={<ShowBlog />} />
         <Route path="/post" element={<Post />} />
         <Route path="/auth" element={<Auth username={username} password={password}
           handleLogin={handleLogin}
           handleNameChange={handleNameChange}
           handlePasswordChange={handlePasswordChange} />} />
-        <Route path="/profile" element={<Profile handleLogout={handleLogout}/>} />
+        <Route path="/profile"  element={<Profile user ={user} handleLogout={handleLogout}/>} />
       </Routes>
       <Footer />
     </div>

@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styles from './ShowBlogs.module.css'
+import { useContext } from 'react'
+import { BlogsContext } from '../context/MyContext'
 
 const ShowBlogs = () => {
-  const [blogs, setBlogs] = useState([])
+  const { blogs, setBlogs } = useContext(BlogsContext)
+
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage,] = useState(6) // change this to control how many blogs appear per page
 

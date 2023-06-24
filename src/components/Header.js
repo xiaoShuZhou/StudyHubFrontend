@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
+import { useContext } from 'react'
+import { UserContext } from '../context/MyContext'
 
-const Header = ({ user }) => {
+const Header = () => {
+  const { user } = useContext(UserContext)
+
   return (
     <header className={styles.header}>
       <div className={styles.icon}><Link className={styles.link} to="/">FullStackHub</Link></div>

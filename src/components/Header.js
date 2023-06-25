@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 import { useContext } from 'react'
-import { UserContext } from '../context/MyContext'
+import { UserContext } from '../context/GlobalContext'
 
 const Header = () => {
   const { user } = useContext(UserContext)

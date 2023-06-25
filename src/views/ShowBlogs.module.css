@@ -68,31 +68,4 @@
   transform: scale(1.3);
 }
 
-.pageNumbers {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
-.pageNumbers button {
-  background-color: #f8f8f8;
-  border: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px 2px;
-  cursor: pointer;
-}
-
-.pageNumbers button:hover {
-  background-color: #ddd;
-}
-
-.pageNumbers .active {
-  background-color: #4CAF50;
-  color: white;
-}

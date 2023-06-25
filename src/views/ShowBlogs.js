@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styles from './ShowBlogs.module.css'
-import { useContext } from 'react'
-import { BlogsContext } from '../context/MyContext'
+import { BlogsContext } from '../context/GlobalContext'
+import Pagination from '../components/Pagination'
 
 const ShowBlogs = () => {
   const { blogs, setBlogs } = useContext(BlogsContext)
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [itemsPerPage,] = useState(6) // change this to control how many blogs appear per page
+  const itemsPerPage = 6
 
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
@@ -22,12 +22,6 @@ const ShowBlogs = () => {
     }
     fetchBlogs()
   }, [])
-
-  // Logic for displaying page numbers
-  const pageNumbers = []
-  for (let i = 1; i <= Math.ceil(blogs.length / itemsPerPage); i++) {
-    pageNumbers.push(i)
-  }
 
   return (
     <div>
@@ -44,17 +38,12 @@ const ShowBlogs = () => {
           </div>
         ))}
       </div>
-      <div className={styles.pageNumbers}>
-        {pageNumbers.map(num => (
-          <button
-            key={num}
-            onClick={() => setCurrentPage(num)}
-            className={currentPage === num ? styles.active : null}
-          >
-            {num}
-          </button>
-        ))}
-      </div>
+      <Pagination
+        itemsPerPage={itemsPerPage}
+        totalItems={blogs.length}
+        paginate={setCurrentPage}
+        currentPage={currentPage}
+      />
     </div>
   )
 }

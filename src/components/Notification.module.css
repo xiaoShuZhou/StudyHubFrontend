@@ -1,0 +1,31 @@
+.notification {
+  position: fixed;  /* Fixes the position relative to the viewport */
+  top: 20%;         /* Positions the top edge of the element to the middle of the viewport */
+  left: 50%;        /* Positions the left edge of the element to the middle of the viewport */
+  transform: translate(-50%, -50%); /* Moves the element back by half of its own width and height to center it perfectly */
+  z-index: 1000;    /* Ensures it appears above other elements */
+  padding: 1rem;    /* Add some padding */
+  width: calc(100% - 2rem); /* Full width minus the left and right spacing */
+  max-width: 400px; /* Don't let it get too wide */
+  box-sizing: border-box; /* So padding doesn't add to the width */
+  background-color: #f4f4f4; /* Some arbitrary color, change as needed */
+  color: #333;      /* Some arbitrary text color, change as needed */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+/* Styles for different notification types */
+
+.notification.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.notification.error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.notification.info {
+  background-color: #d9edf7;
+  color: #31708f;
+}

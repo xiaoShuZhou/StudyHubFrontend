@@ -29,14 +29,19 @@ const Profile = () => {
   const currentItems = userBlogs.slice(indexOfFirstItem, indexOfLastItem)
 
   const handleLogout = () => {
-    window.localStorage.removeItem('loggedBlogAppUser')
-    setUser(null)
-    navigate('/')
+    const confirmation = window.confirm('Do you want to logout?')
+    if(confirmation) {
+      window.localStorage.removeItem('loggedBlogAppUser')
+      setUser(null)
+      navigate('/')
+    }
   }
+
 
   return (
     <div>
-      <h1 className={styles.heading}>{user ? `${user.username}'s Blogs` : 'Not Logged In'}</h1>
+      <h1 className={styles.heading}>{user ? `${user.name}'s Blogs` : 'Not Logged In'}</h1>
+      <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
       <div className={styles.container}>
         {currentItems.map(blog => (
           <div key={blog.id} className={styles.block}>
@@ -55,7 +60,6 @@ const Profile = () => {
         paginate={setCurrentPage}
         currentPage={currentPage}
       />
-      <button onClick={ handleLogout }>Logout</button>
     </div>
   )
 }

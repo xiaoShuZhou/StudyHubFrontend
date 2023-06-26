@@ -1,17 +1,15 @@
+import React, { useContext, useState } from 'react'
 import loginService from '../services/login'
 import blogService from '../services/blogs'
+import { UserContext, NotificationContext } from '../context/GlobalContext'
 import { useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
-import { UserNameContext } from '../context/AuthContext'
-import { PassWordContext } from '../context/AuthContext'
-import { UserContext } from '../context/GlobalContext'
-import { NotificationContext } from '../context/GlobalContext'
+import styles from './Login.module.css'
 
-const LoginForm = () => {
+const Login = () => {
   const navigate = useNavigate()
-  const { username, setUsername } = useContext(UserNameContext)
-  const { password, setPassword } = useContext(PassWordContext)
-  const {  setUser } = useContext(UserContext)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const { setUser } = useContext(UserContext)
   const { setNotification } = useContext(NotificationContext)
 
   const handleLogin = async (event) => {
@@ -28,7 +26,6 @@ const LoginForm = () => {
       setUsername('')
       setPassword('')
       navigate('/profile')
-
     } catch (exception) {
       setNotification({
         type: 'error',
@@ -36,11 +33,11 @@ const LoginForm = () => {
       })
       setTimeout(() => {
         setNotification(null)
-      }, 5000)
+      }, 2000)
     }
   }
 
-  const handleNameChange = (event) => {
+  const handleUsernameChange = (event) => {
     setUsername(event.target.value)
   }
 
@@ -49,31 +46,34 @@ const LoginForm = () => {
   }
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <form onSubmit={handleLogin}>
         <div>
-          username
           <input
             type="text"
             value={username}
             name="Username"
-            onChange={handleNameChange}
+            onChange={handleUsernameChange}
+            placeholder='username'
+            className={styles.inputField}
           />
         </div>
         <div>
-          password
           <input
             type="password"
             value={password}
             name="Password"
             onChange={handlePasswordChange}
+            placeholder='password'
+            className={styles.inputField}
           />
         </div>
-        <button type="submit">login</button>
+        <div className={styles.buttonContainer}>
+          <button type="submit" className={styles.button}>login</button>
+        </div>
       </form>
     </div>
   )
 }
 
-
-export default LoginForm
+export default Login

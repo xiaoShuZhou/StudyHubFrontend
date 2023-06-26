@@ -1,15 +1,12 @@
-/* Auth.module.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin: auto;
+.switchText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6C757D;
+  text-align: center;
 }
 
-.input {
-  margin-bottom: 10px;
-}
-
-.button {
+.switchLink {
   cursor: pointer;
+  color: #007BFF;
+  text-decoration: none;
 }

@@ -20,7 +20,6 @@ const create = async newBlog => {
   return request.data
 }
 
-
 const like = async blog => {
   const config = {
     headers: { Authorization: token },

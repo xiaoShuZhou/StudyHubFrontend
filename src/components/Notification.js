@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Notification.module.css'
 
 const Notification = ({ notification }) => {
   if (notification === null) {
@@ -6,7 +7,7 @@ const Notification = ({ notification }) => {
   }
 
   return (
-    <div className={notification.type}>
+    <div className={`${styles.notification} ${styles[notification.type]}`}>
       {notification.text}
     </div>
   )

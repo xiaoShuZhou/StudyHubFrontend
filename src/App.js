@@ -8,6 +8,8 @@ import ShowBlog from './views/ShowBlog'
 import Post from './views/Post'
 import Auth from './views/Auth'
 import Profile from './views/Profile'
+import EditBlog from './views/EditBlog'
+import ShowResearchResult from './views/ShowResearchResult'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -48,9 +50,11 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/showblogs" element={<ShowBlogs />} />
               <Route path="/showblog/:id" element={<ShowBlog />} />
+              <Route path="/editblog/:id" element={<EditBlog />} />
               <Route path="/post" element={<Post />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/profile"  element={<Profile />} />
+              <Route path="/search" element={<ShowResearchResult />} />
             </Routes>
           </BlogsContext.Provider>
         </UserContext.Provider>

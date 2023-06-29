@@ -37,7 +37,6 @@ const Profile = () => {
     }
   }
 
-
   return (
     <div>
       <h1 className={styles.heading}>{user ? `${user.name}'s Blogs` : 'Not Logged In'}</h1>

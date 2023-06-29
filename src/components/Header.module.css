@@ -2,24 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1%;
   background-color: #f5f5f5;
 }
 
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 20vw; 
+}
 
 .searchBar {
-  flex-grow: 1;
-  margin: 0 20px;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 0.5em;
+  border-radius: 20px 0 0 20px;
   border: none;
   outline: none;
-  box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 0 1vw rgba(0,0,0,0.06);
+  flex-grow: 1;
+}
+
+.searchButton {
+  padding: 0.5em;
+  background: none;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 1vw rgba(0,0,0,0.06);
 }
 
 .navigation {
   display: flex;
-  gap: 20px;
+  gap: 2vw;
 }
 
 .link {

@@ -8,18 +8,19 @@
 }
 
 .title {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .paragraph {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-align: justify;
   max-width: 50vw;
+  padding: 0 1rem;
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   background-color: #007BFF;
   color: white;
   border: none;
@@ -29,12 +30,14 @@
 
 .aboutMeContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .imageContainer {
-  width: 18vw; /* Adjust this to change the image size */
+  width: 18vw;
   position: absolute;
   right: 2vw;
   top: 55vh;
@@ -46,5 +49,48 @@
 }
 
 .center {
-  text-align: center
+  text-align: center;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .paragraph {
+    max-width: 70vw;
+  }
+
+  .aboutMeContainer {
+    flex-direction: column-reverse;
+  }
+
+  .imageContainer {
+    position: relative;
+    width: 40vw;
+    right: auto;
+    top: auto;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .paragraph {
+    max-width: 90vw;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .imageContainer {
+    width: 60vw;
+  }
 }

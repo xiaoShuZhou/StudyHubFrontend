@@ -16,13 +16,13 @@
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  font-size: 1rem; /* Added for scalable font size */
 }
-
 
 .buttonContainer {
   display: flex;
-  justify-content: center;  /* center the button horizontally */
-  width: 100%;  /* ensure the container takes up the full width */
+  justify-content: center;
+  width: 100%;
 }
 
 .button {
@@ -33,6 +33,7 @@
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  font-size: 1rem; /* Added for scalable font size */
 }
 
 .button:hover {
@@ -49,5 +50,18 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* For smaller/mobile screens */
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 1rem;
+  }
+  
+  .inputField, .button {
+    font-size: 0.875rem;  /* Reduced font size for better readability on mobile */
   }
 }

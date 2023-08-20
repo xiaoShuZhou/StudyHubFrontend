@@ -12,3 +12,27 @@
   margin: 10px;
   cursor: pointer;
 }
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+  .icon {
+    margin: 8px;
+    font-size: 1.2em;  /* Adjust size as needed */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+  .icon {
+    margin: 6px;
+    font-size: 1em;  /* Adjust size as needed */
+  }
+}

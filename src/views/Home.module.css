@@ -1,6 +1,6 @@
 .carouselImage {
   height: 85vh; 
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -9,4 +9,20 @@
   height: 100%;
   object-fit: cover; 
   object-position: center;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .carouselImage {
+    height: 70vh; 
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .carouselImage {
+    height: 50vh; 
+  }
 }

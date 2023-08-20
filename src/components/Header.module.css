@@ -47,3 +47,32 @@
 .link:hover {
   color: royalblue;
 }
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .searchForm {
+    max-width: 50vw;
+  }
+  .navigation {
+    gap: 1vw;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 5%;
+  }
+  .searchForm {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;  /* Add some space between search and navigation on mobile */
+  }
+  .navigation {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}

@@ -3,10 +3,37 @@
   font-weight: 500;
   color: #6C757D;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .switchLink {
   cursor: pointer;
   color: #007BFF;
   text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Add a hover effect for switchLink for better user feedback */
+.switchLink:hover {
+  color: #0056b3; /* A slightly darker shade for hover */
+}
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .switchText {
+    font-size: 0.9rem; /* Slightly reduce the font size for tablets */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .switchText {
+    font-size: 0.8rem; /* Reduce the font size for mobile devices */
+  }
+
+  .switchLink {
+    font-size: 0.8rem; /* Ensure link font size is consistent with text */
+  }
 }

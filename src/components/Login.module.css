@@ -1,4 +1,3 @@
-/* LoginForm.module.css */
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
 
 .inputField {
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;  /* Reduced for mobile-first approach */
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -33,6 +32,7 @@
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  width: 100%;  /* Make button full width for mobile-first */
 }
 
 .button:hover {
@@ -49,5 +49,19 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* For larger than mobile screens */
+@media (min-width: 481px) {
+  .inputField {
+    margin-bottom: 3rem;  /* Back to original spacing */
+  }
+  
+  .button {
+    width: auto;  /* Set width back to auto for larger screens */
+    padding: 1rem 3rem;  /* Increase horizontal padding for aesthetics */
   }
 }

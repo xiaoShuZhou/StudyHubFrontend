@@ -1,21 +1,22 @@
 .pageNumbers {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;  /* Converted px to rem for better scalability */
+  margin-bottom: 1.25rem;  /* Converted px to rem */
 }
 
 .pageNumbers button {
   background-color: #f8f8f8;
   border: none;
   color: black;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;  /* Converted px to rem */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 5px 2px;
+  font-size: 1rem;  /* Converted px to relative unit */
+  margin: 0.3125rem 0.125rem;  /* Converted px to rem */
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .pageNumbers button:hover {
@@ -25,4 +26,14 @@
 .pageNumbers .active {
   background-color: #4CAF50;
   color: white;
+}
+
+/* Responsive Media Queries */
+
+/* For smaller/mobile screens */
+@media (max-width: 480px) {
+  .pageNumbers button {
+    padding: 0.5rem 1rem;  /* Slightly reduced padding for mobile */
+    font-size: 0.875rem;  /* Reduced font-size to fit smaller screens better */
+  }
 }

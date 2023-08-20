@@ -1,5 +1,3 @@
-/* ShowBlogs.module.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&family=Courier+New&display=swap');
 
 .heading {
@@ -17,39 +15,39 @@
 
 .block {
   width: 24%; /* Four blocks in one line */
-  height: 40vh; /* Adjust as necessary */
-  margin: 1em; /* Space between rows */
-  overflow: hidden; /* Prevents content from spilling out of the block */
-  border: 0.1rem solid #ccc; /* Border around the block */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add box-shadow for a more 3D look */
-  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow when hovered */
+  height: 40vh; 
+  margin: 1em; 
+  overflow: hidden; 
+  border: 0.1rem solid #ccc; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+  transition: box-shadow 0.3s ease; 
 }
 
 .block:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Increase box-shadow on hover for a lifted effect */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
 }
 
 .block img {
   width: 100%;
-  height: 50%; /* Adjust as necessary */
-  object-fit: cover; /* Ensures the image covers the available space without stretching */
+  height: 50%; 
+  object-fit: cover; 
 }
 
 .block h2 {
-  font-size: 1.3rem; /* Responsive unit */
+  font-size: 1.3rem; 
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   margin-left: 0.3rem;
   text-align: center;
-  transition: transform 0.3s ease; /* Add transition for a smoother scale effect */
+  transition: transform 0.3s ease; 
 }
 
 .block h2:hover {
-  transform: scale(1.1); /* Scale up the title on hover */
+  transform: scale(1.1); 
 }
 
 .block p {
-  font-size: 1rem; /* Responsive unit */
+  font-size: 1rem; 
   font-family: 'Open Sans', sans-serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -58,9 +56,9 @@
 }
 
 .customlink {
-  text-decoration: none; /* Remove default underline */
-  color: inherit; /* Inherit color from parent */
-  transition: color 0.3s transform 0.3s ease;
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.3s, transform 0.3s ease;
 }
 
 .customlink:hover {
@@ -76,7 +74,7 @@
   color: #ffffff;
   background-color: #007bff;
   border: none;
-  border-radius: 0.3125rem; /* Equivalent to 5px when base font-size is 16px */
+  border-radius: 0.3125rem; 
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -86,3 +84,30 @@
   background-color: #0056b3;
 }
 
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .block {
+    width: 48%; /* Two blocks in one line */
+  }
+  .heading {
+    font-size: 1.8em;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .block {
+    width: 100%; /* Single block for smaller screens */
+  }
+  .heading {
+    font-size: 1.5em;
+  }
+  .block h2 {
+    font-size: 1.2rem;
+  }
+  .block p {
+    font-size: 0.9rem;
+  }
+}

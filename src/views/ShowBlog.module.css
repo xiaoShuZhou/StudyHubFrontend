@@ -6,13 +6,11 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-
 }
 
 .imageContainer {
   width: 80vw;
   height: 45vh;
-  /* overflow: hidden; */
 }
 
 .image {
@@ -52,19 +50,23 @@
   margin-bottom: 1rem;
 }
 
-.editButton {
+.editButton,
+.deleteButton {
   display: block;
   margin: 0 auto;
   padding: 0.5rem 0.5rem;
   font-size: 1em;
-  color: #ffffff;
-  background-color: #007bff;
   border: none;
   border-radius: 0.3125rem; /* Equivalent to 5px when base font-size is 16px */
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease;
   width: 5rem;
+  color: #ffffff;
+}
+
+.editButton {
+  background-color: #007bff;
 }
 
 .editButton:hover {
@@ -72,20 +74,51 @@
 }
 
 .deleteButton {
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem 0.5rem;
-  font-size: 1em;
-  color: #ffffff;
   background-color: #dc3545;
-  border: none;
-  border-radius: 0.3125rem; /* Equivalent to 5px when base font-size is 16px */
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  width: 5rem;
 }
 
 .deleteButton:hover {
   background-color: #c82333;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    width: 90vw;
+  }
+
+  .editButton,
+  .deleteButton {
+    width: 4.5rem;
+    padding: 0.4rem 0.4rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .imageContainer {
+    width: 100vw;
+    height: 35vh;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    width: 95vw;
+    font-size: 1.2rem;
+  }
+
+  .editButton,
+  .deleteButton {
+    width: 4rem;
+    padding: 0.3rem 0.3rem;
+  }
 }
